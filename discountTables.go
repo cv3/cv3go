@@ -18,12 +18,12 @@ type ProductGroup struct {
 	Description   string `xml:"Description"`
 	DiscountTable string `xml:"DiscountTable"`
 	Type          string `xml:"Type"`
-	Products      []SKU  `xml:"Products"`
+	Products      []SKU  `xml:"Products>SKU"`
 }
 
 //SKU is the struct to hold skus
 type SKU struct {
-	SKU string `xml:"SKU"`
+	SKU string `xml:",chardata"`
 }
 
 //
